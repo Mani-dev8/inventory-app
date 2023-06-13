@@ -11,7 +11,9 @@ const port = 5000
 app.use('/api/v1/', user)
 app.use('/api/v1/', product)
 app.use('/api/v1/', category)
-
+app.get('/',(req,res)=>{
+    res.send('working !')
+})
 app.listen(port, () => {
     console.log(`server is running on port ${port}`);
 })
